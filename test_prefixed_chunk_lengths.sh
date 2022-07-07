@@ -1,0 +1,9 @@
+#!/bin/bash
+
+(printf 'GET http://localhost:6789/firstGet HTTP/1.1\r\n'\
+'Transfer-Encoding: chunked\r\n'\
+'Host: localhost\r\n\r\n'\
+'+0x3\r\n'\
+'abc\r\n'\
+'0\r\n'\
+'\r\n'; sleep 1) | nc localhost 6789
