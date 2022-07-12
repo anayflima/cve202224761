@@ -7,6 +7,6 @@
 (printf 'GET http://localhost:6789/firstGet HTTP/1.1\r\n'\
 'Content-Length: +52\r\n'\
 '\r\n'\
-'GET http://localhost:6789/thirdGet HTTP/1.1\r\n'\
+'GET http://localhost:6789/firstGet HTTP/1.1\r\n'\
 'Dummy: GET http://localhost:6789/secondGet HTTP/1.1\r\n'\
 '\r\n'; sleep 1) | nc localhost 6789
