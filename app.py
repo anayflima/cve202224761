@@ -11,16 +11,16 @@ app = Flask(__name__)
 
 @app.route('/firstGet')
 def firstGet():
-    # print(request.json)
-    return 'This is the response for the FIRST get:\n' + request.data.decode("utf-8") + '\n\n'
+    return 'This is the payload of the FIRST get:\n\n' + request.data.decode("utf-8") + '\n\n'
 
 @app.route('/secondGet')
 def secondGet():
-    return 'This is the response for the SECOND get:\n' + request.data.decode("utf-8") + '\n\n'
+    return 'This is the payload of the SECOND get:\n\n' + request.data.decode("utf-8") + '\n\n'
 
 @app.route('/thirdGet')
 def thirdGet():
-    return 'This is the response for the THIRD get:\n' + request.data.decode("utf-8") + '\n\n'
+    return 'This is the payload of the THIRD get:\n\n' + request.data.decode("utf-8") + '\n\n'
+    # return messageReturn("THIRD", request)
 
 if __name__ == "__main__":
     serve(app, host='0.0.0.0', port=6789)
