@@ -20,7 +20,6 @@ def secondGet():
 @app.route('/thirdGet')
 def thirdGet():
     return 'This is the payload of the THIRD get:\n\n' + request.data.decode("utf-8") + '\n\n'
-    # return messageReturn("THIRD", request)
 
 if __name__ == "__main__":
     serve(app, host='0.0.0.0', port=6789)
